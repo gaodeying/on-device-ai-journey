@@ -14,3 +14,6 @@ print("numpy array: ", arr)
 # numpy -> tensor
 t = torch.from_numpy(arr)
 print("back to tensor: ", t)
+
+
+
