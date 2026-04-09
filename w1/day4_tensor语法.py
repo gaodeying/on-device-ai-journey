@@ -104,6 +104,10 @@ image_tensor = torch.from_numpy(normalized.transpose(2, 0, 1)).float()
 print(f"iamge_tensor shape: {image_tensor.shape}")
 
 #添加batch维度
+# 为什么用 unsqueeze(0)？因为模型要求输入有 batch 维（[N, C, H, W]），但 image_tensor 只有 [C, H, W]
+# unsqueeze(0) 在最前面添加一维，变成 [1, C, H, W]，表示 batch size = 1
 batch = image_tensor.unsqueeze(0)
 print(f"iamge_tensor_batch: {batch.shape}")
+
+
 
