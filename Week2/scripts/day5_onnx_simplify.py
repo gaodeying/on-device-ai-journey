@@ -35,3 +35,4 @@ simplified_size = os.path.getsize(simplified_path) / 1e6
 print(f'原始模型大小：{original_size:.5f} MB, 简化后的模型大小: {simplified_size:.5f} MB')
 print("OK day5 完成")
 
+
