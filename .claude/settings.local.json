@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/gaodeying/Desktop/Git_on-device-ai-journey/职业规划/每周计划 -type f -name *.md)",
+      "Bash(find /Users/gaodeying/Desktop/Git_on-device-ai-journey/职业规划/Temp -type f -name *.md)"
+    ]
+  }
+}
