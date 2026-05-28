@@ -38,8 +38,31 @@ void functionTest() {
     std::cout << func2(10) << std::endl;
 }
 
+void demo_lambda() {
+    std::cout << "/n ===== lambda =====" << std::endl;
 
-int main() {
+    auto add = [](int a, int b) { return a + b; };
+    std::cout << " add(3, 4) = " << add(3, 4) << std::endl;
+
+    int inference_count = 0;
+    auto logger = [&inference_count](const std::string & msg) {
+        inference_count ++;
+        std::cout << " [Inference #" << inference_count << "]" << msg << std::endl;
+    };
+
+    logger("开始推理...");
+    logger("推理结束");
+
+    // std::function<void(const std::string&)> callback = logger;
+    // 这里加&（即&logger）是因为logger是一个捕获了局部变量的lambda，直接赋值给std::function时编译器允许转换，
+    // 但如果logger是mutable lambda或希望保持引用而非拷贝，可以写成std::function<void(const std::string&)> callback = std::ref(logger);
+    // 实际上，std::function会拷贝logger，不用&也行，但如果传递的是可变lambda或需要保持捕获变量同步，需要std::ref或&。
+    std::function<void(const std::string&)> callback = logger;
+    callback("通过 function 调用");
+
+}
+
+void fooTest() {
     std::unique_ptr<Foo> p1(std::make_unique<Foo>());
     // p1 不空, 输出
     if (p1) p1->foo();
@@ -59,13 +82,17 @@ int main() {
     // p1 不空, 输出
     if (p1) p1->foo();
     // Foo 的实例会在离开作用域时被销毁
+}
 
-    lambda_expression_capture();
+int main() {
+    
+    // lambda_expression_capture();
 
-    std::cout << "Funtion Test" << std::endl;
+    // std::cout << "Funtion Test" << std::endl;
 
-    functionTest();
+    // functionTest();
 
+    demo_lambda();
 }
 
 
