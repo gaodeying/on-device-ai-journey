@@ -1,4 +1,12 @@
 .DS_Store
 **/.DS_Store
+__pycache__/
+**/__pycache__/
+*.pyc
+.venv*/
+
 Week2/onnxruntime-inference-examples-main/*
 Week2/scripts/out-video_4.mp4
+
+# 大模型文件
+*.onnx.data

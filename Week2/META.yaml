@@ -1,0 +1,11 @@
+title: "ONNX 导出与推理"
+week: 2
+status: completed
+started: 2026-04-08
+finished: 2026-04-14
+topics: [ONNX, ONNX Runtime, 模型导出, 动态batch, 端到端推理, 性能对比]
+output:
+  - blog_w2.md
+  - scripts/day6_end_to_end_demo.py
+  - scripts/day2_onnx_export.py
+  - scripts/day5_onnx_simplify.py

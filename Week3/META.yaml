@@ -1,0 +1,7 @@
+title: "现代 C++ 激活与 NDK 推理"
+week: 3
+status: learning
+started: 2026-04-15
+topics: [C++, CMake, ONNX Runtime C++ API, NDK]
+output:
+  - scripts/day1.cpp

@@ -1,0 +1,10 @@
+{
+  "total_weeks": 12,
+  "start_date": "2026-04-01",
+  "end_date": "2026-06-23",
+  "plan_file": "职业规划/最终版_端侧AI工程师_3个月冲刺计划_v3.0_优化版.md",
+  "weekly_plans_dir": "职业规划/每周计划",
+  "output_dir": "output",
+  "output_types": ["blog", "interview", "summary"],
+  "side_tracks": ["量化交易"]
+}

@@ -1,0 +1,12 @@
+title: "Python + PyTorch 基础"
+week: 1
+status: completed
+started: 2026-04-01
+finished: 2026-04-07
+topics: [Python, NumPy, PyTorch, Tensor, Autograd, ResNet50, 推理]
+output:
+  - blog_week1.md
+  - day5_pretrained_inference.py
+  - day5_autograd_min_demo.py
+  - day4_tensor语法.py
+  - day3_NumPy.py
